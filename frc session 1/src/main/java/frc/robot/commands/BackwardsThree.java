@@ -11,16 +11,15 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 public class Backwards extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final RomiDrivetrain m_db;
-  private final double distance;
+  private final double distance = 3.0;
 
   /**
    * Creates a new ExampleCommand.
    *
    * @param subsystem The subsystem used by this command.
    */
-  public Backwards(RomiDrivetrain db, double inches) {
+  public Backwards(RomiDrivetrain db) {
     m_db = db;
-    distance = inches;
     // Use addRequirements() here to declare subsystem dependencies
     addRequirements(db);
   }
